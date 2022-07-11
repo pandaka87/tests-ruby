@@ -9,11 +9,11 @@ def menu
   return menu_result
 end
 
-def who_is_bigger(a, b, c)
-  if liste.select! {|i| i == nil}  #=> "dog"
+def who_is_bigger(a, b, c) 
+  if liste.match {|i| i == nil}  #=> "dog"
    puts "nil detected"
   else 
-    result = liste.min{ |x, y| x.length <=> y.length }
+    result = liste.min {|x, y| x.length <=> y.length }
   return "#{result} is bigger"
   end
 end
@@ -54,5 +54,4 @@ def perform
       puts "L'entrée n'est pas correcte. Indique un nombre entre 1 et 4 (inclus)."
   end
 end
-
 perform

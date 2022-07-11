@@ -19,6 +19,21 @@ def ask_x
   return x
 end
 
+def ask_array
+  puts "Choisis un nombre :"
+  print " > "
+  a = gets.chomp.to_i
+  print " > "
+  b = gets.chomp.to_i
+  print " > "
+  c = gets.chomp.to_i
+  print " > "
+  d = gets.chomp.to_i  
+  print " > "
+  e = gets.chomp.to_i
+  return array = [a, b, c, d, e]
+end
+
 def ask_calculator
   puts "Quelle action souhaites-tu faire ? (Fais-ton choix entre 1 et 6)"
   puts "1 - Addition"
@@ -42,8 +57,8 @@ def subtract(n1,n2)
   return calculator
 end
 
-def sum(n1,n2)
-
+def sum(array)
+  return array.sum
 end
 
 def multiply(n1,n2)
@@ -52,7 +67,7 @@ def multiply(n1,n2)
 end
 
 def power(n1,n2)
-  calculator = n1 ^ n2
+  calculator = n1**n2
   return calculator
 end
 
@@ -71,11 +86,13 @@ def perform
     when "2"
       n1 = ask_n1
       n2 = ask_n2
-      puts substract(n1,n2)
+      puts subtract(n1,n2)
     when "3"
-      n1 = ask_n1
-      n2 = ask_n2
-      puts sum(n1,n2)
+      array = ask_array
+      print array
+      puts " "
+      print " > "
+      puts sum(array)
     when "4"
       n1 = ask_n1
       n2 = ask_n2

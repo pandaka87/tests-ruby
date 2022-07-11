@@ -10,20 +10,30 @@ def menu
 end
 
 def who_is_bigger(a, b, c) 
-  if liste.match {|i| i == nil}  #=> "dog"
-   puts "nil detected"
+  array = [a, b, c]
+    n = %w[a b c]
+  if array.include?(nil)
+   return "nil detected"
   else 
-    result = liste.min {|x, y| x.length <=> y.length }
-  return "#{result} is bigger"
+    return "#{n[array.index {|x| x == array.max}]} is bigger"
   end
 end
 
-def reverse_upcase_noLTA
-
+def ask_string
+  string = gets.chomp
+  return string
 end
 
-def array_42
+def reverse_upcase_noLTA(string)
+  crazy = string.reverse.upcase.reject! { |x| x =~ /["A","L","T"]/ }
+  return crazy
+end
 
+def array_42(array)
+  if array.include?(42)
+    return true
+  else return false
+  end
 end
 
 def magic_array
@@ -33,19 +43,11 @@ end
 def perform
   menu_result = menu
   case menu_result
-    when "1"
-      liste = []
-      puts "Donne-moi 3 nombres :"
-      print " > "
-      a = gets.chomp.to_i
-      print " > "
-      b = gets.chomp.to_i
-      print " > "
-      c = gets.chomp.to_i
-      liste.push(a,b,c)
+    when "1"   
       puts who_is_bigger(a, b, c)
     when "2"
-      puts reverse_upcase_noLTA
+      string = ask_string
+      puts reverse_upcase_noLTA(string)
     when "3"
       puts array_42
     when "4"

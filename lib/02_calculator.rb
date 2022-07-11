@@ -20,7 +20,7 @@ def ask_x
 end
 
 def ask_array
-  puts "Choisis un nombre :"
+  puts "Choisis 5 nombres :"
   print " > "
   a = gets.chomp.to_i
   print " > "

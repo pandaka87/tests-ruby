@@ -41,7 +41,7 @@ end
 # Let's write some tests !
 # we'll show you the first, you will write the others :)
 
-describe "#multiply" do
+describe "multiply" do
 
   it "multiplies two numbers" do
     expect(multiply(3, 4)).to eq(12)
@@ -62,14 +62,14 @@ describe "#multiply" do
 
 end
 
-describe "#power" do
+describe "power" do
   it "raises one number to the power of another number" do
     expect(power(3, 5)).to eq(243)
   end
 end
 
 # http://en.wikipedia.org/wiki/Factorial
-describe "#factorial" do
+describe "factorial" do
   it "computes the factorial of 0" do
     expect(factorial(0)).to eq(1)
   end

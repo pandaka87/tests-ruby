@@ -25,7 +25,7 @@ def ask_string
 end
 
 def reverse_upcase_noLTA(string)
-  crazy = string.reverse.upcase.reject! { |x| x =~ /["A","L","T"]/ }
+  crazy = string.reverse.upcase.delete("L").delete("T").delete("A")
   return crazy
 end
 
@@ -49,7 +49,7 @@ def perform
       string = ask_string
       puts reverse_upcase_noLTA(string)
     when "3"
-      puts array_42
+      puts array_42(array)
     when "4"
       puts magic_array
     else 

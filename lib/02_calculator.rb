@@ -1,8 +1,8 @@
-def ask_n1
-  puts "Choisis un premier nombre :"
+def ask_n
+  puts "Choisis un nombre :"
   print " > "
-  n1 = gets.chomp.to_i
-  return n1
+  n = gets.chomp.to_i
+  return n
 end
 
 def ask_n2
@@ -10,13 +10,6 @@ def ask_n2
   print " > "
   n2 = gets.chomp.to_i
   return n2
-end
-
-def ask_x
-  puts "Choisis un nombre :"
-  print " > "
-  x = gets.chomp.to_i
-  return x
 end
 
 def ask_array
@@ -47,46 +40,46 @@ def ask_calculator
   return result
 end
 
-def add (n1,n2)
-  calculator = n1 + n2
-  return calculator
+def add (n,n2)
+  addition = n + n2
+  return addition
 end
 
-def subtract(n1,n2)
-  calculator = n1 - n2
-  return calculator
+def subtract(n,n2)
+  subt = n - n2
+  return subt
 end
 
 def sum(array)
   return array.sum
 end
 
-def multiply(n1,n2)
-  calculator = n1 * n2
-  return calculator
+def multiply(n,n2)
+  multi = n * n2
+  return multi
 end
 
-def power(n1,n2)
-  calculator = n1**n2
-  return calculator
+def power(n,n2)
+  pow = n**n2
+  return pow
 end
 
 def factorial(x)
-  calculator = (1..x).inject(1) {|r,i| r*i }
-  return calculator
+  fact = (1..x).inject(1) {|r,i| r*i }
+  return fact
 end
 
 def perform
   result = ask_calculator
   case result
     when "1"
-      n1 = ask_n1
+      n = ask_n
       n2 = ask_n2
-      puts add(n1,n2)
+      puts add(n,n2)
     when "2"
-      n1 = ask_n1
+      n = ask_n
       n2 = ask_n2
-      puts subtract(n1,n2)
+      puts subtract(n,n2)
     when "3"
       array = ask_array
       print array
@@ -94,16 +87,16 @@ def perform
       print " > "
       puts sum(array)
     when "4"
-      n1 = ask_n1
+      n = ask_n
       n2 = ask_n2
-      puts multiply(n1,n2)
+      puts multiply(n,n2)
     when "5"
-      n1 = ask_n1
+      n = ask_n
       n2 = ask_n2
-      puts power(n1,n2)
+      puts power(n,n2)
     when "6"
-      x = ask_x
-      puts factorial(x)
+      n = ask_n
+      puts factorial(n)
     else 
       puts "L'entrée n'est pas correcte. Indique un nombre entre 1 et 6 (inclus)."
   end

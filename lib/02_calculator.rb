@@ -64,8 +64,8 @@ def power(n,n2)
   return pow
 end
 
-def factorial(x)
-  fact = (1..x).inject(1) {|r,i| r*i }
+def factorial(n)
+  fact = (1..n).inject(1) {|r,i| r*i }
   return fact
 end
 

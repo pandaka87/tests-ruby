@@ -25,7 +25,7 @@ def ask_string
 end
 
 def reverse_upcase_noLTA(string)
-  crazy = string.reverse.upcase.delete("L").delete("T").delete("A")
+  crazy = string.reverse.upcase.tr("LTA", "")
   return crazy
 end
 
@@ -36,8 +36,8 @@ def array_42(array)
   end
 end
 
-def magic_array
-
+def magic_array(magie)
+  magie.flatten.sort.map{|i| i*2}.select{|i| i%3 != 0}.uniq
 end
 
 def perform

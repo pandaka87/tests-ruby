@@ -63,7 +63,7 @@ def perform
     when "5"
       puts first_word
     when "6"
-      puts titleize
+      puts titleize(words)
     else 
       puts "L'entrée n'est pas correcte. Indique un nombre entre 1 et 6 (inclus)."
   end
